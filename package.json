@@ -1,0 +1,37 @@
+{
+  "name": "frontend-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bugs": "webpack-dev-server --config webpack.dev.config.js --env.APP_TYPE=BUGS_HOOKS",
+    "nobugs": "webpack-dev-server --config webpack.dev.config.js --env.APP_TYPE=NOBUGS",
+    "server": "node server.js",
+    "build": "webpack",
+    "start": "concurrently \"npm run server\" \"npm run bugs\"",
+    "buggy-app": "concurrently \"npm run server\" \"npm run bugs\"",
+    "nobugs-app": "concurrently \"npm run server\" \"npm run nobugs\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^6.2.1",
+    "webpack": "^4.41.6",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
